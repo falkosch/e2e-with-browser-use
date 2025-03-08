@@ -1,3 +1,5 @@
 browser-use
 dotenv
 langchain_ollama
+
+junitparser
