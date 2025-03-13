@@ -30,7 +30,7 @@ async def perform_task(browser: Browser, llm: BaseChatModel, task_file_name: str
         history = await agent.run()
         result = history.final_result()
         if result:
-            test_case.system_out = result.tostring()
+            test_case.system_out = str(result)
         else:
             test_case.result = [Error('No result')]
         xml.write(f'{task_file_name}.report.xml')
